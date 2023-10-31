@@ -17,4 +17,19 @@ public:
     BinarySearchTreeNode* successor();
 };
 
+class BinarySearchTree {
+public:
+    BinarySearchTreeNode* root;
+
+    BinarySearchTree();
+    ~BinarySearchTree();
+
+    void insert(int key);
+    void remove(int key);
+    BinarySearchTreeNode* search(int key);
+
+private:
+    void transplant(BinarySearchTreeNode* u, BinarySearchTreeNode* v);
+};
+
 #endif
